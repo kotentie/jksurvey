@@ -16,11 +16,12 @@
 #
 development:
   adapter: postgresql
+  host: localhost
   encoding: unicode
-  database: jksurvey_development
+  database: jksurvey1_development
   pool: 5
-  username: jksurvey
-  password:
+  username: postgres
+  password: greatape8
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -46,15 +47,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: jksurvey_test
+  database: jksurvey1_test
   pool: 5
-  username: jksurvey
-  password:
+  username: postgres
+  password: greatape8
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: jksurvey_production
+  database: jksurvey1_production
   pool: 5
-  username: jksurvey
-  password:
+  username: postgres
+  password: greatape8

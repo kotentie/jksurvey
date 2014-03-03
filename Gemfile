@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.3'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -26,6 +26,13 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem "typus", :git => "git://github.com/fesplugas/typus.git", :branch => "4-0-stable"
+
+gem 'acts_as_list'
+
+gem 'mailboxer'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
