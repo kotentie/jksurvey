@@ -11,7 +11,7 @@ Choice:
 Question:
   fields:
     default: question, position, questionaire_id
-    form: question
+    form: question, questionaire_id
   order_by: position
   relationships: choices
   filters: created_at
@@ -20,9 +20,9 @@ Question:
 
 Questionaire:
   fields:
-    default: questionaire,  position
+    default: questionaire
     form: questionaire
-  order_by: position
-  filters: created_at
+  order_by: 
+  filters: 
   search:
   application: survey  
