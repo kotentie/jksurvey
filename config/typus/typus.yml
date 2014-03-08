@@ -10,19 +10,21 @@ Choice:
 
 Question:
   fields:
-    default: question, position, questionaire_id
-    form: question
+    default: question, position
+    form: question, questionaire_id
   order_by: position
   relationships: choices
   filters: created_at
   search: question
   application: survey
 
-Questionaire:
+  Questionaire:
   fields:
-    default: questionaire,  position
-    form: questionaire
-  order_by: position
-  filters: created_at
-  search:
-  application: survey  
+    default: questionaire, questionaire_id
+    form: questionaire, questionaire_id
+  order_by: 
+  relationships: questons
+  filters: 
+  search: 
+  application: survey
+
