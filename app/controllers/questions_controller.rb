@@ -1,12 +1,14 @@
 class QuestionsController < ApplicationController
 	def show
 		@question = Question.find(params[:id])
-		@choices =  @question.choices		
+		@choices =  @question.choices
+		@url = params[:url]		
 	end
 
 	def answer
+	   @url = params[:url]		
 	   @choice = Choice.find(:first, :conditions => { :id => params[:id] })
-	   @answer = Answer.create(:question_id => @choice.question_id, :choice_id => @choice.id)
+	   @answer = Answer.create(:question_id => @choice.question_id, :choice_id => @choice.id, :pagename => @url)
 	    
 	   if Question.last == @choice.question
 	     render :action => "thankyou"

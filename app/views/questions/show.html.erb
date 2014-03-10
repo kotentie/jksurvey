@@ -9,7 +9,7 @@
     <% @choices.each_with_index do |c, i| %>
       <% i = i + 1 %>
       <li data-theme="c">
-        <%= link_to "#{i}. #{c.choice}", answer_questions_path(:id => c.id) %>
+        <%= link_to "#{i}. #{c.choice}", answer_questions_path(:id => c.id, :url => @url) %>
       </li>
     <% end %>
   </ul>

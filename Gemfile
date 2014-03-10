@@ -33,6 +33,8 @@ gem 'acts_as_list'
 
 gem 'mailboxer'
 
+require 'cgi' 
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
