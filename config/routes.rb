@@ -1,4 +1,18 @@
 Jksurvey::Application.routes.draw do
+  resources :answers
+
+  resources :choices
+
+resources :questions do
+    collection do
+      get :answer
+    end
+end
+
+root :to => "questions#index"
+
+resources :questionaires
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
