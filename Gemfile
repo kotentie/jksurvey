@@ -35,6 +35,8 @@ gem 'mailboxer'
 
 require 'cgi' 
 
+gem 'rails_12factor', group: :production
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -52,3 +54,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+ruby "2.1.1"
+
