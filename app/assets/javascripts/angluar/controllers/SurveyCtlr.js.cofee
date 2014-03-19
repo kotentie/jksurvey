@@ -1,2 +1,0 @@
-
-@surveysays.controller 'SurveyCtrl', ['$scope', ($scope) ->  ]
