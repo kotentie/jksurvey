@@ -2,11 +2,14 @@ class QuestionsController < ApplicationController
 	def show
 		@question = Question.find(params[:id])
 		@choices =  @question.choices
-		@url = params[:url]		
+		session[:url]  = params[:url]
+			
+		
 	end
 
 	def answer
-	   @url = params[:url]		
+	   @url = session[:url] 
+	   session[:url] = @url		
 	   @choice = Choice.find(:first, :conditions => { :id => params[:id] })
 	   @answer = Answer.create(:question_id => @choice.question_id, :choice_id => @choice.id, :pagename => @url)
 	    
