@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+config.action_dispatch.default_headers = {
+    'X-Frame-Options' => 'ALLOWALL'
+}
+
 module Jksurvey
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
