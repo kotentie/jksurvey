@@ -37,6 +37,14 @@ require 'cgi'
 
 gem 'rails_12factor', group: :production
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+end
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
