@@ -1,2 +1,0 @@
-describe Questionnaire do
-end
